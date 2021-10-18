@@ -1,0 +1,61 @@
+{
+	"website": {
+    "title":"盖尔德智慧农业",
+    "subtitle": "",
+    "keywords":"待描写",
+    "author": "webyunkong"
+  },
+	"navBar": {
+    "src":"",
+    "list":[
+      {
+        "name":"首页",
+        "link":"",
+        "iconType":"",
+        "child":[]
+      },
+      {
+        "name":"产品展示",
+        "link":"",
+        "iconType":"",
+        "child":[]
+      },
+      {
+        "name":"解决方案",
+        "link":"",
+        "iconType":"",
+        "child":[]
+      },
+      {
+        "name":"新闻咨询",
+        "link":"",
+        "iconType":"",
+        "child":[]
+      },
+      {
+        "name":"关于我们",
+        "link":"",
+        "iconType":"",
+        "child":[]
+      }
+    ]
+  },
+  "pages":{
+    "main":{
+      "navBar":true
+    },
+    "list":{
+      "navBar":true
+    },
+    "info":{
+      "navBar":true
+    }
+  },
+  "banner":[
+    "/banner/1.png",
+    "/banner/1.png",
+    "/banner/1.png",
+    "/banner/1.png",
+    "/banner/1.png"
+  ]
+}
