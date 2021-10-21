@@ -35,24 +35,26 @@
 
 
 
-
+/* Technology start */
 .main .content:nth-child(1) .container{
   display: flex;
   flex-flow: column;
   justify-content: center;
   height: 100%; 
 }
-.main .content:nth-child(1) .container h2{
+.main .content:nth-child(1) h2{
   font-size: 50px;
 }
-.main .content:nth-child(1) .container h2:nth-child(2){
+.main .content:nth-child(1) h2:nth-child(2){
   margin-bottom: 34px;
 }
-.main .content:nth-child(1) .container p{
+.main .content:nth-child(1) p{
   font-size: 24px;
   color: #333333;
 }
+/* Technology end */
 
+/* 公司介绍 start */
 .main .content:nth-child(2) .container{
   display: flex;
   flex-flow: column;
@@ -60,22 +62,24 @@
   align-items: center;
   height: 100%; 
 }
-.main .content:nth-child(2) .container h2{
+.main .content:nth-child(2) h2{
   font-size: 50px;
   text-align: center;
   color: #fff;
   margin-bottom: 60px;
 }
-.main .content:nth-child(2) .container .line::after{
+.main .content:nth-child(2) .line::after{
   width: 100%;
 }
-.main .content:nth-child(2) .container p{
+.main .content:nth-child(2) p{
   text-align: center;
   font-size: 24px;
   color: #333333;
   color: #fff;
 }
+/* 公司介绍 end */
 
+/* 盖尔德土壤检测设备 start */
 .main .content:nth-child(3) .container{
   display: flex;
   flex-flow: row nowrap;
@@ -83,7 +87,7 @@
   align-items: start;
   padding-top: 123px;
 }
-.main .content:nth-child(3) .container .list .item{
+.main .content:nth-child(3) .list .item{
   position: relative;
   display: flex;
   box-sizing: border-box;
@@ -98,10 +102,10 @@
   overflow: hidden;
   border-radius: 20px;
 }
-.main .content:nth-child(3) .container .list .item:nth-child(even){
+.main .content:nth-child(3) .list .item:nth-child(even){
   margin:40px 0;
 }
-.main .content:nth-child(3) .container .list .item::after{
+.main .content:nth-child(3) .list .item::after{
   content: '';
   position: absolute;
   top: 0;
@@ -114,19 +118,24 @@
   /* 值越大越模糊 */
   filter:blur(20px);
 }
+/* 盖尔德土壤检测设备 end */
 
-.main .content:nth-child(3) .container .item img:nth-child(1){
+.main .content:nth-child(3) .item img:nth-child(1){
   width:30px;
   height: 30px;
 }
-.main .content:nth-child(3) .container .item h4{
+.main .content:nth-child(3) .item h4{
  padding-left: 15px;
 }
-.main .content:nth-child(3) .container .item img:nth-child(3){
+.main .content:nth-child(3) .item img:nth-child(3){
   display: block;
   margin-left: auto;
   width: 24.89px;
   height: 15.22px;
+}
+/* 变大效果 */
+.main .content:nth-child(3) .item:hover{
+  background-color: #fff;
 }
 
 

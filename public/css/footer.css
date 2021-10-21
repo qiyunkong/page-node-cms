@@ -1,0 +1,13 @@
+.footer{
+    background-color: #eee;
+}
+.footer .container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.footer .footer-links{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
