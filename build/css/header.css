@@ -1,0 +1,19 @@
+.header {
+  background-color: #fff;
+}
+.header .container {
+  display: flex;
+  height: 105px;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header-nav .nav-list {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.header .header-nav .nav-list .nav-item {
+  padding: 0 10px;
+  font-size: 18px;
+  color: #333;
+}

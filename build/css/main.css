@@ -1,0 +1,399 @@
+.main {
+  background-color: #fff;
+}
+.main .bg {
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.main .content.swiper {
+  background-image: url('../img/bg-1.png');
+  height: 469px;
+  margin-bottom: 60px;
+}
+.main .content.introduce {
+  background-image: url('../img/bgblack.png'), url('../img/bg-2.png');
+  height: 562px;
+  margin-bottom: 60px;
+}
+.main .content.equipment {
+  background-image: url('../img/bg-3.png');
+  height: 602px;
+}
+.main .content.soil {
+  background-color: #F6F6F6;
+}
+.main .content.applet {
+  background-color: #fff;
+}
+.main .content.solution,
+.main .content.case,
+.main .content.content.news {
+  padding-top: 120px;
+  background-color: #fff;
+}
+/* banner start */
+.main .content.swiper .container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 100%;
+}
+.main .content.swiper h2 {
+  font-size: 50px;
+}
+.main .content.swiper h2:nth-child(2) {
+  margin-bottom: 34px;
+}
+.main .content.swiper p {
+  font-size: 24px;
+  color: #333333;
+}
+/* banner end */
+/* 公司介绍 start */
+.main .content.introduce .container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.main .content.introduce h2 {
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 60px;
+}
+.main .content.introduce .line::after {
+  width: 100%;
+}
+.main .content.introduce p {
+  text-align: center;
+  font-size: 24px;
+  color: #333333;
+  color: #fff;
+}
+/* 公司介绍 end */
+/* 盖尔德土壤检测设备 start */
+.main .content.equipment .container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: start;
+  padding-top: 123px;
+}
+.main .content.equipment .list .item {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 41px;
+  padding-right: 23.6px;
+  margin: 0 0 0 auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  align-items: center;
+  width: 333px;
+  height: 92px;
+  font-size: 24px;
+  font-family: 'GRDRegular';
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+.main .content.equipment .list .item:nth-child(even) {
+  margin: 40px 0;
+  margin-left: auto;
+  margin-right: 0;
+}
+/* 盖尔德土壤检测设备 end */
+.main .content.equipment .item img:nth-child(1) {
+  width: 30px;
+  height: 30px;
+}
+.main .content.equipment .item h4 {
+  padding-left: 15px;
+}
+.main .content.equipment .item p {
+  display: none;
+  font-size: 20px;
+  color: #787878;
+}
+.main .content.equipment .item img:nth-child(4) {
+  display: block;
+  margin-left: auto;
+  width: 24.89px;
+  height: 15.22px;
+}
+/* 变大效果 */
+.main .content.equipment .item:hover {
+  display: block;
+  background-color: #fff;
+  height: auto;
+  width: 427px;
+  border-radius: 0;
+}
+.main .content.equipment .item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  display: none;
+  width: 46px;
+  height: 46px;
+  border-top: 5px solid #178FCC;
+  border-left: 5px solid #178FCC;
+}
+.main .content.equipment .item:hover::after {
+  display: block;
+}
+.main .content.equipment .item:hover h4 {
+  padding-top: 12px;
+  padding-left: 0px;
+}
+.main .content.equipment .item:hover p {
+  display: block;
+  padding-bottom: 13px;
+}
+.main .content.equipment .item:hover img:nth-child(1) {
+  display: none;
+}
+.main .content.equipment .item:hover img:nth-child(4) {
+  display: none;
+}
+.main .content.soil .container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: start;
+  padding-top: 241px;
+}
+.main .content.soil .promo {
+  position: relative;
+}
+.main .content.soil .promo > img {
+  width: 312px;
+  height: 887px;
+}
+.main .content.soil .brick {
+  position: absolute;
+  width: 80.8px;
+  height: 80.5px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .content.soil .brick h5 {
+  position: absolute;
+  right: -100px;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'GRDRegular';
+  width: 119.01px;
+  line-height: 37.21px;
+  background-color: #fff;
+}
+.main .content.soil .brick:nth-child(1) {
+  top: 270.8px;
+  left: -77.5px;
+}
+.main .content.soil .brick:nth-child(2) {
+  top: 660.5px;
+  left: -30.5px;
+}
+.main .content.soil .aside .tab .item {
+  margin-top: 84px;
+  width: 685px;
+  height: 443px;
+  padding: 30px;
+  box-sizing: border-box;
+  display: none;
+}
+.main .content.soil .aside .tab .item.active {
+  display: block;
+}
+.main .content.soil .aside .tab .item h3 {
+  font-size: 40px;
+  font-family: 'GRDHeavy';
+}
+.main .content.soil .aside .tab .item p {
+  font-size: 30px;
+  font-family: 'GRDHeavy';
+}
+.main .content.soil .aside .tab .item p,
+.main .content.soil .aside .tab .item h3 {
+  color: #fff;
+}
+.main .content.soil .aside .tab .item:nth-child(1) {
+  background-image: url('../img/panel01.png');
+}
+.main .content.soil .aside .tab .item:nth-child(2) {
+  background-image: url('../img/panel02.png');
+}
+.main .content.solution h2,
+.main .content.solution p {
+  text-align: center;
+}
+.main .content.solution h2.line {
+  margin-bottom: 46px;
+}
+.main .content.solution h2.line::after,
+.main .content.case h2.line::after,
+.main .content.content.news h2.line::after {
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+.main .content.solution p {
+  font-size: 24px;
+}
+.main .content.solution .list {
+  margin-top: 80px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.main .content.solution .list .item {
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 23px;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 334px;
+  height: 334px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+.main .content.solution .list .item h3 {
+  font-size: 30px;
+  font-family: 'GRDBold';
+  color: #333333;
+  padding-top: 18px;
+  padding-bottom: 11px;
+  text-align: left;
+}
+.main .content.solution .list .item p {
+  font-size: 20px;
+  font-family: 'GRDRegular';
+  text-align: left;
+  color: #333333;
+}
+.main .content.case h2 {
+  text-align: center;
+}
+.main .content.case .list {
+  padding-top: 66px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.main .content.case .item {
+  padding: 10px 0;
+}
+.main .content.case .item img {
+  display: block;
+  margin: 0 auto;
+  width: 333px;
+  height: 198px;
+  margin-bottom: 13px;
+}
+.main .content.case .item h4 {
+  font-size: 28px;
+  color: #333;
+  font-family: "GRDBold";
+  width: 336px;
+  text-align: left;
+}
+.main .content.content.news h2,
+.main .content.content.news .more {
+  text-align: center;
+}
+.main .content.content.news .more {
+  padding-top: 60px;
+  padding-bottom: 140px;
+  font-size: 20px;
+  font-family: 'GRDRegular';
+  text-align: center;
+}
+.main .content.content.news .container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.main .content.content.news h4 {
+  font-size: 24px;
+  font-family: 'GRDRegular';
+}
+.main .content.content.news .pic-list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.main .content.content.news .pic-list .item {
+  position: relative;
+  width: 404px;
+  height: 404px;
+  margin-right: 71px;
+}
+.main .content.content.news .pic-list .item img {
+  display: block;
+  width: 404px;
+  height: 404px;
+}
+.mask {
+  position: absolute;
+  height: 140px;
+  width: 100%;
+  bottom: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.mask h3 {
+  font-size: 22px;
+  font-family: 'GRDBlod';
+  padding: 10px 21px 0 9px;
+}
+.mask time {
+  padding-right: 25px;
+  padding-top: 10px;
+  display: block;
+  text-align: right;
+}
+.news-list {
+  box-sizing: border-box;
+  padding-left: 35px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  width: 404px;
+  height: 412px;
+  background-color: #F8F8F8;
+}
+.news-list .item {
+  position: relative;
+}
+.news-list .item::after {
+  position: absolute;
+  top: 5px;
+  left: -26px;
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px solid #333333;
+  border-radius: 50%;
+}
+.news-list .item h3 {
+  font-size: 21px;
+  color: #333333;
+  font-family: 'GRDBlod';
+}
+.news-list .item time {
+  font-size: 16px;
+  font-family: 'GRDRegular';
+  color: #B9B9B9;
+}
