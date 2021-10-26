@@ -38,7 +38,10 @@ gulp.task('build',async () => {
     
   // copy img
   gulp.src('./gulp/src/img/*')
-  .pipe(gulp.dest('build/img'))  
+  .pipe(gulp.dest('build/img')) 
+
+  gulp.src('./gulp/src/js/**/*')
+  .pipe(gulp.dest('build/js'))
   // copy font
   gulp.src('./gulp/src/font/*')
   .pipe(gulp.dest('build/font'))  

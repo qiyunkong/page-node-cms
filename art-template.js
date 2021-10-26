@@ -2,7 +2,7 @@
 const templaet  = require('art-template');
 const path = require('path');
 
-const views = path.join(__diranme,'theme','main.art');
+const views = path.join(__dirname ,'theme','main.art');
 
 // template 方法是用来拼接字符串的
 // 1.模板路径 绝对路径

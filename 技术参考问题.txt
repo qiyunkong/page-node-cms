@@ -20,7 +20,14 @@ https://blog.csdn.net/qq_42813491/article/details/104266776
 当元素宽度增加时，如何实现“向右增加”，“向左增加”，“从中间向两侧增加”。
 https://www.jianshu.com/p/7b8b1f2aaec3
 
+实战|HTML页面生成器：使用JavaScript和Node创建CLI
+https://zhuanlan.zhihu.com/p/138977343
 css reset
 
+利用fs.readdir读取当前目录的所有文件名
+https://www.cnblogs.com/xagg/p/10825402.html
+
+笔记
+https://www.kancloud.cn/guoyupeng/node/1086187
 引入query
 

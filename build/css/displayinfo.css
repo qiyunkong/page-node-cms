@@ -37,6 +37,9 @@ p {
   color: #333333;
   font-family: 'GRDRegular';
 }
+.banner img {
+  vertical-align: bottom;
+}
 @font-face {
   font-family: "GRDBold";
   src: url("../font/PingFang\ Bold.ttf");
@@ -98,9 +101,16 @@ p {
   font-size: 18px;
   color: #333;
 }
-.post .container {
+.layout {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 20px;
+}
+.layout .layout-article {
+  flex: 0.9;
+}
+.layout .layout-aside {
+  width: 263px;
 }
 .news {
   background-color: #F8F8F8;
@@ -128,9 +138,18 @@ p {
 .news .news-list .item time {
   color: #ABABAB;
 }
-.article {
-  flex: 0.9;
+.docx {
   min-height: 900px;
+}
+.docx h1 {
+  text-align: center;
+}
+.docx p {
+  font-family: 宋体, simsun;
+  font-size: 16px;
+  line-height: 1.5em;
+  margin-top: 0px;
+  margin-bottom: 5px;
 }
 .footer {
   height: 300px;

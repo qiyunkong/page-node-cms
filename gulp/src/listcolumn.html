@@ -14,12 +14,18 @@
   <section class="banner">
     <img src="img/banner.png" alt="">
   </section>
-  <section class="listcolumn content">
-    <section class="container">
-      @@include('./common/aside.html')
-      @@include('./common/archives.html')
+  <main class="content">
+    <section class="container layout">
+      <aside class="layout-aside">
+        @@include('./common/category.html')
+        @@include('./common/news.html')
+        @@include('./common/news.html')
+      </aside>
+      <section class="layout-article">
+        @@include('./common/archives.html')
+      </section>
     </section>
-  </section>
+  </main>
   @@include('./common/footer.html')
 </body>
 </html>

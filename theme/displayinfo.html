@@ -9,22 +9,12 @@
   <title>内容页</title>
 </head>
 <body>
-  @@include('./common/topbar.html')
-  @@include('./common/header.html')
+  {{include './common/topbar.html'}}
+  {{include './common/header.html'}}
   <section class="banner">
     <img src="img/banner.png" alt="">
   </section>
-  <main class="content">
-    <section class="container layout">
-      <section class="layout-article">
-        @@include('./common/article.html')
-      </section>
-      <aside class="layout-aside">
-        @@include('./common/news.html')
-        @@include('./common/news.html')
-      </aside>
-    </section>
-  </main>
-  @@include('./common/footer.html')
+  {{include './common/post.html'}}
+  {{ include './common/footer.html'}}
 </body>
 </html>

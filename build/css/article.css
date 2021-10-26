@@ -1,4 +1,13 @@
-.article {
-  flex: 0.9;
+.docx {
   min-height: 900px;
+}
+.docx h1 {
+  text-align: center;
+}
+.docx p {
+  font-family: 宋体, simsun;
+  font-size: 16px;
+  line-height: 1.5em;
+  margin-top: 0px;
+  margin-bottom: 5px;
 }
