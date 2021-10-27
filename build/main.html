@@ -12,11 +12,14 @@
   <!-- topbar start -->
 <section class="topbar">
   <section class="container">
-    <div class="topbar-info">
-      <a><img src="img/icon-website.png"/>盖尔德集团网站</a>
-      <a><img src="img/icon-user.png"/>用户社区</a>
-      <a><img src="img/icon-login.png"/>登录/注册</a>
-    </div>
+    <ul class="topbar-info">
+      <li><img src="img/icon-website.png"/><a href="http://www.gelde.cn/">盖尔德集团网站</a></li>
+      <li><img src="img/icon-user.png"/><a href="http://jsguider.com/?faq/">用户社区</a></li>
+      <li><img src="img/icon-login.png"/>
+        <a href="http://www.gelde.cn/?login.html">登录</a>/
+        <a href="http://www.gelde.cn/?reg.html">注册</a>
+      </li>
+    </ul>
   </section>
 </section>
 <!-- topbar end -->
@@ -27,12 +30,11 @@
     <nav class="header-nav">
       <ul class="nav-list">
         <li class="nav-item"><a href="">网站首页</a></li>
-        <li class="nav-item"><a href="">智能科技</a></li>
-        <li class="nav-item"><a href="">新闻咨讯</a></li>
-        <li class="nav-item"><a href="">解决方案</a></li>
-        <li class="nav-item"><a href="">公司概况</a></li>
-        <li class="nav-item"><a href="">关于我们</a></li>
-        <li class="nav-item"><a href="">联系我们</a></li>
+        <li class="nav-item"><a href="#id1">产品展示</a></li>
+        <li class="nav-item"><a href="#id3">解决方案</a></li>
+        <li class="nav-item"><a href="#id4">经典案例</a></li>
+        <li class="nav-item"><a href="#id5">关于我们</a></li>
+        <li class="nav-item"><a href="#id2">新闻咨讯</a></li>
       </ul>
     </nav>
   </section>
@@ -48,7 +50,7 @@
       <p>让科技推动中国农业发展  实现农业的全自动化</p>
     </section>
   </section>
-  <section class="content bg introduce">
+  <section id="id5" class="content bg introduce">
     <section class="container">
       <h2 class="line">公司介绍</h2>
       <p>江苏盖尔德信息科技有限公司是以软件开发</p>
@@ -63,7 +65,7 @@
       </p>
     </section>
   </section>
-  <section class="content bg equipment">
+  <section  id="id4" class="content bg equipment">
     <section class="container">
       <aside class="aside">
         <p>什么是</p>
@@ -132,10 +134,10 @@
       </section>
     </section>
   </section>
-  <section class="content applet">
+  <section id="id1" class="content applet">
     <img src="img/bg-4.png" alt="" width="100%">
   </section>
-  <section class="content bg solution">
+  <section id="id3" class="content bg solution">
     <section class="container">
       <h2>为什么选择</h2>
       <h2 class="line">盖尔德土壤检测设备解决方案</h2>
@@ -171,51 +173,51 @@
     <section class="container">
       <ul class="list">
         <li class="item"> 
-          <img src="./img/case01.png" alt="">
+          <div class="pic-box mouseover"><img src="./img/case01.png" alt=""></div>
           <h4>福州省泉州现代农业示范园</h4>
         </li>
         <li class="item">
-          <img src="./img/case02.png" alt="">
+          <div class="pic-box mouseover"><img src="./img/case02.png" alt=""></div>
           <h4>黑龙江佳木斯稻田智能气象检测项目</h4>
         </li>
         <li class="item">
-          <img src="./img/case03.png" alt="">
+          <div class="pic-box mouseover"><img src="./img/case03.png" alt=""></div>
           <h4>江西省上饶市鄱阳草药种植基地</h4>
         </li>
       </ul>
 
       <ul class="list">  
         <li class="item">
-          <img src="./img/case04.png" alt="">
+          <div class="pic-box mouseover"><img src="./img/case04.png" alt=""></div>
           <h4>建德建坤农业开启“智慧农 业”</h4>
         </li>
         <li class="item">
-          <img src="./img/case05.png" alt="">
+          <div class="pic-box mouseover"><img src="./img/case05.png" alt=""></div>
           <h4>辽宁省岫岩满族自治县育苗实验基地</h4>
         </li>
         <li class="item">
-          <img src="./img/case06.png" alt="">
+          <div class="pic-box mouseover"><img src="./img/case06.png" alt=""></div>
           <h4>浙江传化农业物联网基地</h4>
         </li>
       </ul>
     </section>
   </section>
-  <section class="content bg news">
+  <section id="id2" class="content bg news">
     <h2 class="line">新闻咨讯</h2>
     <section class="container">
       <section class="new">
         <h4>公司动态</h4>
         <ul class="pic-list">
-          <li class="item">
-            <img src="img/news-1.png" alt="">
+          <li class="item mouseover">
+            <img src="img/news-1.png" class="mouseover" alt="">
             <div class="mask">
               <h3>江苏盖尔德信息科技有限公司与江苏建筑职业技术学院举行校企合作签约仪式</h3>
               <time>2021/7/28</time>
             </div>
           
           </li>
-          <li class="item">
-            <img src="img/news-2.png" alt="">
+          <li class="item mouseover">
+            <img src="img/news-2.png" class="mouseover" alt="">
             <div class="mask">
               <h3>江苏盖尔德2021春季户外拓展活动</h3>
               <time>2021/7/28</time>
@@ -295,6 +297,7 @@
 </footer>
 <!-- footer end -->
   <script src="js/jquery/jquery-1.11.3.min.js"></script>
+  <script src="js/singlePageNav/jquery.singlePageNav.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

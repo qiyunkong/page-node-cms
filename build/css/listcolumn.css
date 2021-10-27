@@ -2,6 +2,12 @@
   max-width: 1348px;
   margin: 0 auto;
 }
+.mouseover:hover img {
+  transform: scale(1.2);
+}
+.mouseover img {
+  transition: 0.25s;
+}
 .line {
   position: relative;
 }
@@ -76,7 +82,7 @@ p {
   display: flex;
   justify-items: center;
 }
-.topbar .topbar-info a {
+.topbar .topbar-info li {
   color: #333333;
   padding-right: 17px;
   display: flex;

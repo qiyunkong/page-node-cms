@@ -11,16 +11,18 @@ let fileDirectory = fs.readdirSync('./docx');
 let createArticle = async (dir,path) =>{
   const htmls = [];
   const links = [];
-  const category = 'page';
+  const category = 'category01';
 
   // 遍历docx文件中value
   for(let i = 0; i < dir.length; i++){
+    console.log("dir[i]==",dir[i])
     // 读取docx下所有的文件
     const {value} = await mammoth.convertToHtml({
-      path:`docx\\${dir[i]}`
+      path:`docx/${dir[i]}`
     })
     // 正则表达式
     const reg = /<h1>(?<title>.*)<\/h1>(?<content>.*)/;
+    // if(i == 37) console.log(value);
     const [groups] = reg.exec(value);
     // 存入文章对象
     htmls.push({
@@ -39,10 +41,10 @@ let createArticle = async (dir,path) =>{
     })
 
     // 生成html
-    fs.writeFileSync(`${i+1}.html`,codeHTML);
+    fs.writeFileSync(`./${category}/${i+1}.html`,codeHTML);
 
     // 保存链接
-    links.push(`page\\${category}${i+1}.html`)
+    links.push(`page/${category}/${i+1}.html`);
   }
 
 

@@ -2,6 +2,12 @@
   max-width: 1348px;
   margin: 0 auto;
 }
+.mouseover:hover img {
+  transform: scale(1.2);
+}
+.mouseover img {
+  transition: 0.25s;
+}
 .line {
   position: relative;
 }
@@ -76,7 +82,7 @@ p {
   display: flex;
   justify-items: center;
 }
-.topbar .topbar-info a {
+.topbar .topbar-info li {
   color: #333333;
   padding-right: 17px;
   display: flex;
@@ -401,7 +407,14 @@ p {
   margin: 0 auto;
   width: 333px;
   height: 198px;
+}
+.main .content.case .item .pic-box {
+  display: block;
+  margin: 0 auto;
+  width: 333px;
+  height: 198px;
   margin-bottom: 13px;
+  overflow: hidden;
 }
 .main .content.case .item h4 {
   font-size: 28px;
@@ -442,6 +455,7 @@ p {
   width: 404px;
   height: 404px;
   margin-right: 71px;
+  overflow: hidden;
 }
 .main .content.content.news .pic-list .item img {
   display: block;

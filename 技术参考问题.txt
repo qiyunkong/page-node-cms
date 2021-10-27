@@ -31,3 +31,5 @@ https://www.cnblogs.com/xagg/p/10825402.html
 https://www.kancloud.cn/guoyupeng/node/1086187
 引入query
 
+VSCode使用正则表达式进行内容替换
+https://www.cnblogs.com/jerryqi/p/9604828.html

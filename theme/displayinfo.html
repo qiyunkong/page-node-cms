@@ -14,7 +14,17 @@
   <section class="banner">
     <img src="img/banner.png" alt="">
   </section>
-  {{include './common/post.html'}}
-  {{ include './common/footer.html'}}
+  <main class="content">
+    <section class="container layout">
+      <section class="layout-article">
+        {{include './common/article.html'}}
+      </section>
+      <aside class="layout-aside">
+        {{include './common/news.html'}}
+        {{include './common/news.html'}}
+      </aside>
+    </section>
+  </main>
+  {{include './common/footer.html'}}
 </body>
 </html>
