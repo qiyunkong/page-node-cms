@@ -11,7 +11,7 @@ let fileDirectory = fs.readdirSync('./docx');
 let createArticle = async (dir,path) =>{
   const htmls = [];
   const links = [];
-  const category = 'category01';
+  const category = 'category02';
 
   // 遍历docx文件中value
   for(let i = 0; i < dir.length; i++){
@@ -22,11 +22,10 @@ let createArticle = async (dir,path) =>{
     })
     // 正则表达式
     const reg = /<h1>(?<title>.*)<\/h1>(?<content>.*)/;
-    // if(i == 37) console.log(value);
-    const [groups] = reg.exec(value);
+    const result = reg.exec(value);
     // 存入文章对象
     htmls.push({
-      ...groups,
+      ...result.groups,
     });
   }
   console.log(htmls.length)
@@ -34,22 +33,29 @@ let createArticle = async (dir,path) =>{
 
   // 遍历htmls数组
   for(let i = 0; i < htmls.length; i++){
-
     // 模板渲染
-    let codeHTML = templaet(path,{
-      ...htmls[i]
-    })
+    let codeHTML = templaet(path,htmls[i])
 
     // 生成html
-    fs.writeFileSync(`./${category}/${i+1}.html`,codeHTML);
+    fs.writeFileSync(`./build/page/${category}/${i+1}.html`,codeHTML);
 
     // 保存链接
-    links.push(`page/${category}/${i+1}.html`);
+    links.push(
+      {
+        title:htmls[i].title,
+        link:`/page/${category}/${i+1}.html`,
+      }
+    );
   }
 
-
+  
   // 生成JSON数据
-  console.log("生成JSON数据")
+  let data = {
+    categoryName:'新闻咨询',
+    linkList:links
+  }
+  fs.writeFileSync(`./build/db/${category}.json`,JSON.stringify(data));
+  console.log("生成数据")
 }
 
 

@@ -34,16 +34,17 @@
   font-weight: bold;
   margin-bottom: 22px;
 }
-h2 {
+.container h2 {
   font-size: 50px;
   font-weight: bold;
   font-family: 'GRDHeavy';
 }
-p {
+.container p {
   color: #333333;
   font-family: 'GRDRegular';
 }
 .banner img {
+  width: 100%;
   vertical-align: bottom;
 }
 @font-face {

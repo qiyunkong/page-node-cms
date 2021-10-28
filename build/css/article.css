@@ -1,8 +1,35 @@
 .docx {
   min-height: 900px;
+  font-family: 宋体, simsun;
+  background-color: #F8F8F8;
+  padding: 18px;
+}
+.docx h1,
+.docx h2 {
+  text-align: center;
+  font-size: 24px;
 }
 .docx h1 {
+  line-height: 26px;
+  font-family: GRDBold;
+  font-weight: bold;
+  color: #272727;
+  padding: 5px;
+  word-wrap: break-word;
   text-align: center;
+  font-size: 24px;
+}
+.docx h2 {
+  color: #178FCC;
+}
+.docx time {
+  color: #5E5E5E;
+  font-size: 12px;
+}
+.docx img {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
 }
 .docx p {
   font-family: 宋体, simsun;

@@ -34,16 +34,17 @@
   font-weight: bold;
   margin-bottom: 22px;
 }
-h2 {
+.container h2 {
   font-size: 50px;
   font-weight: bold;
   font-family: 'GRDHeavy';
 }
-p {
+.container p {
   color: #333333;
   font-family: 'GRDRegular';
 }
 .banner img {
+  width: 100%;
   vertical-align: bottom;
 }
 @font-face {
@@ -113,10 +114,89 @@ p {
   padding-bottom: 20px;
 }
 .layout .layout-article {
-  flex: 0.9;
+  flex: 0.99;
 }
 .layout .layout-aside {
   width: 263px;
+}
+.m-style {
+  position: relative;
+  text-align: center;
+  zoom: 1;
+  display: flex;
+  justify-content: center;
+}
+.m-style:before,
+.m-style:after {
+  content: "";
+  display: table;
+}
+.m-style:after {
+  clear: both;
+  overflow: hidden;
+}
+.m-style span {
+  float: left;
+  margin: 0 5px;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  color: #bdbdbd;
+  font-size: 14px;
+}
+.m-style .active {
+  float: left;
+  margin: 0 5px;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  background: #178FCC;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid #178FCC;
+}
+.m-style a {
+  float: left;
+  margin: 0 5px;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  color: #bdbdbd;
+  font-size: 14px;
+}
+.m-style a:hover {
+  color: #fff;
+  background: #178FCC;
+}
+.m-style .next,
+.m-style .prev {
+  font-family: "Simsun";
+  font-size: 16px;
+  font-weight: bold;
+}
+.now,
+.count {
+  padding: 0 5px;
+  color: #f00;
+}
+.eg img {
+  max-width: 800px;
+  min-height: 500px;
+}
+input {
+  float: left;
+  margin: 0 5px;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  outline: none;
+  color: #bdbdbd;
+  font-size: 14px;
 }
 .archives h2 {
   padding-top: 30px;
@@ -166,14 +246,6 @@ p {
   padding-top: 81px;
   font-size: 21px;
   text-align: center;
-}
-.archives .page a {
-  display: inline-block;
-}
-.archives .page .active {
-  padding: 10px;
-  background-color: #1296db;
-  color: #fff;
 }
 .category {
   padding: 10px 8px;
