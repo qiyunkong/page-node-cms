@@ -15,21 +15,30 @@ function getRequest(){
  return obj;
 }
 $(function(){
-  const data = getRequest();
-  let category
+  const options = getRequest();
+  console.log(options);
+  let categorys = {
+    "category01":0,
+    "category02":1,
+    "category03":2,
+  };
+  let category;
   try{
-    category = JSON.stringify(data) == "{}"?'category01':data.category;
+    category = options.category == undefined?'category01':options.category;
   }catch(error) {
-    category = 'category01';
+    category = 'category02';
   }
-  
-  initAjaxData(category)
-  
+  console.log(category)
+  // 初始化请求
+  //initAjaxData(category)
   // 修改分类状态
   $(".category .list .item").click(function(){
     $(".category .list .item").eq($(this).index()).addClass("active").siblings().removeClass("active");
     initAjaxData($(this).data('category'))
+
   })
+  
+  $(".category .list .item").eq(categorys[category]).click()
 
  
 });

@@ -17,15 +17,18 @@
   <main class="content">
     <section class="container layout">
       <aside class="layout-aside">
-        {{include './common/category.html'}}
-        {{include './common/news.html'}}
-        {{include './common/news.html'}}
+        {{include './common/category.html' dbX}}
+        {{include './common/news.html' dbX}}
       </aside>
       <section class="layout-article">
         {{include './common/archives.html'}}
       </section>
     </section>
   </main>
-  {{include './common/footer.html'}}
+  {{include './common/footer.html'}}  
+  <script src="/js/jquery/jquery-1.11.3.min.js"></script>
+  <script src="/js/pagination/jquery.pagination.js"></script>
+  <script src="/js/getJSON/index.js"></script>
+  <script src="/js/listcolumn.js"></script>
 </body>
 </html>

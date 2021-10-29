@@ -10,6 +10,9 @@
 }
 .line {
   position: relative;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'GRDHeavy';
 }
 .line::after {
   content: '';
@@ -140,6 +143,10 @@
 .main .content.content.news {
   padding-top: 120px;
   background-color: #fff;
+}
+.main .content.solution {
+  padding-top: 0px;
+  padding-bottom: 120px;
 }
 /* banner start */
 .main .content.swiper .container {
@@ -509,6 +516,9 @@
   font-size: 21px;
   color: #333333;
   font-family: 'GRDBlod';
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .news-list .item time {
   font-size: 16px;

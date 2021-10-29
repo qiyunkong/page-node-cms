@@ -10,6 +10,9 @@
 }
 .line {
   position: relative;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'GRDHeavy';
 }
 .line::after {
   content: '';

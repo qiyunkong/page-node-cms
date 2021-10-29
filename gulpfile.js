@@ -32,7 +32,7 @@ gulp.task('build',async () => {
     .pipe(gulp.dest('./build/css'))
 
   // html
-  gulp.src('./gulp/src/*.html')
+  gulp.src('./gulp/src/index.html')
     .pipe(fileinclude())
     .pipe(gulp.dest('build')) 
     
