@@ -4,18 +4,14 @@
     background-size: 100%;
     background-repeat: no-repeat;
   }
-  .content.swiper{
-    background-image: url('../img/bg-1.png');
-    height: 469px;
-    margin-bottom: 60px;
+  .content.swiper,
+  .content.introduce{
+    position: relative;
+    .swiper-slide{
+      position: relative;
+    }
   }
-   .content.introduce{
-    background-image:
-    url('../img/bgblack.png'),
-    url('../img/bg-2.png');
-    height: 562px;
-    margin-bottom: 60px;
-  }
+
   .content.equipment{
     background-image: url('../img/bg-3.png');
     height: 602px;
@@ -44,22 +40,58 @@
 /* banner start */
 .main {
   .content {
-    &.swiper {
+    &.swiper,
+    &.introduce {
       .container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-flow: column;
         justify-content: center;
-        height: 100%;
+        left: 0;
+        right: 0;
+      }
+      .img-responsive{
+        width: 100%;
+        vertical-align: bottom;
       }
       h2 {
+        color: #fff;
         font-size: 50px;
         &:nth-child(2) {
           margin-bottom: 34px;
         }
       }
-      p {
+      p{
+        color: #fff;
         font-size: 24px;
-        color: #333333;
+      }
+    }
+    &.swiper{
+      .arrowhead{
+        width: 30px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 130px;
+        margin: auto;
+        z-index: 2;
+        animation-iteration-count: infinite;
+      }
+    }
+    &.introduce{
+      // margin-top: 100px;
+      h2 {
+        color: #333;
+        font-size: 50px;
+        &:nth-child(2) {
+          margin-bottom: 34px;
+        }
+      }
+      p{
+        color: #333;
+        font-size: 24px;
       }
     }
   }
@@ -67,28 +99,7 @@
 /* banner end */
 
 /* 公司介绍 start */
-.main .content.introduce .container{
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%; 
-}
-.main .content.introduce h2{
-  font-size: 50px;
-  text-align: center;
-  color: #fff;
-  margin-bottom: 60px;
-}
-.main .content.introduce .line::after{
-  width: 100%;
-}
-.main .content.introduce p{
-  text-align: center;
-  font-size: 24px;
-  color: #333333;
-  color: #fff;
-}
+
 /* 公司介绍 end */
 
 /* 盖尔德土壤检测设备 start */
@@ -187,7 +198,7 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: start;
-  padding-top: 241px;
+  padding-top: 40px;
 }
 .main .content.soil .promo{
   position: relative;

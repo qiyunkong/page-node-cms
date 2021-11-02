@@ -76,7 +76,10 @@
 }
 .topbar {
   background-color: #F8F8F8;
+  position: fixed;
+  z-index: 99;
   height: 25px;
+  width: 100%;
 }
 .topbar .container {
   display: flex;
@@ -94,6 +97,10 @@
 }
 .header {
   background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  top: 25px;
 }
 .header .container {
   display: flex;
@@ -102,14 +109,26 @@
   justify-content: space-between;
   align-items: center;
 }
+.header .header-nav {
+  height: 100%;
+}
 .header .header-nav .nav-list {
+  height: 100%;
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
 }
 .header .header-nav .nav-list .nav-item {
   padding: 0 10px;
   font-size: 18px;
   color: #333;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.header .header-nav .nav-list .nav-item.active {
+  border-bottom: 4px solid #178FCC;
 }
 .main {
   background-color: #fff;
@@ -118,15 +137,13 @@
   background-size: 100%;
   background-repeat: no-repeat;
 }
-.main .content.swiper {
-  background-image: url('../img/bg-1.png');
-  height: 469px;
-  margin-bottom: 60px;
-}
+.main .content.swiper,
 .main .content.introduce {
-  background-image: url('../img/bgblack.png'), url('../img/bg-2.png');
-  height: 562px;
-  margin-bottom: 60px;
+  position: relative;
+}
+.main .content.swiper .swiper-slide,
+.main .content.introduce .swiper-slide {
+  position: relative;
 }
 .main .content.equipment {
   background-image: url('../img/bg-3.png');
@@ -149,46 +166,59 @@
   padding-bottom: 120px;
 }
 /* banner start */
-.main .content.swiper .container {
+.main .content.swiper .container,
+.main .content.introduce .container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-flow: column;
   justify-content: center;
-  height: 100%;
+  left: 0;
+  right: 0;
 }
-.main .content.swiper h2 {
+.main .content.swiper .img-responsive,
+.main .content.introduce .img-responsive {
+  width: 100%;
+  vertical-align: bottom;
+}
+.main .content.swiper h2,
+.main .content.introduce h2 {
+  color: #fff;
   font-size: 50px;
 }
-.main .content.swiper h2:nth-child(2) {
+.main .content.swiper h2:nth-child(2),
+.main .content.introduce h2:nth-child(2) {
   margin-bottom: 34px;
 }
-.main .content.swiper p {
+.main .content.swiper p,
+.main .content.introduce p {
+  color: #fff;
   font-size: 24px;
-  color: #333333;
+}
+.main .content.swiper .arrowhead {
+  width: 30px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 130px;
+  margin: auto;
+  z-index: 2;
+  animation-iteration-count: infinite;
+}
+.main .content.introduce h2 {
+  color: #333;
+  font-size: 50px;
+}
+.main .content.introduce h2:nth-child(2) {
+  margin-bottom: 34px;
+}
+.main .content.introduce p {
+  color: #333;
+  font-size: 24px;
 }
 /* banner end */
 /* 公司介绍 start */
-.main .content.introduce .container {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-.main .content.introduce h2 {
-  font-size: 50px;
-  text-align: center;
-  color: #fff;
-  margin-bottom: 60px;
-}
-.main .content.introduce .line::after {
-  width: 100%;
-}
-.main .content.introduce p {
-  text-align: center;
-  font-size: 24px;
-  color: #333333;
-  color: #fff;
-}
 /* 公司介绍 end */
 /* 盖尔德土壤检测设备 start */
 .main .content.equipment .container {
@@ -282,7 +312,7 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: start;
-  padding-top: 241px;
+  padding-top: 40px;
 }
 .main .content.soil .promo {
   position: relative;

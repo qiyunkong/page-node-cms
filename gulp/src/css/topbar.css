@@ -1,0 +1,21 @@
+.topbar {
+  background-color: #F8F8F8;
+  position: fixed;
+  z-index: 99;
+  height: 25px;
+  width: 100%;
+}
+.topbar .container {
+  display: flex;
+  justify-content: flex-end;
+}
+.topbar .topbar-info {
+  display: flex;
+  justify-items: center;
+}
+.topbar .topbar-info li {
+  color: #333333;
+  padding-right: 17px;
+  display: flex;
+  align-items: center;
+}

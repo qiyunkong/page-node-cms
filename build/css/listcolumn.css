@@ -76,7 +76,10 @@
 }
 .topbar {
   background-color: #F8F8F8;
+  position: fixed;
+  z-index: 99;
   height: 25px;
+  width: 100%;
 }
 .topbar .container {
   display: flex;
@@ -94,6 +97,10 @@
 }
 .header {
   background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  top: 25px;
 }
 .header .container {
   display: flex;
@@ -102,14 +109,26 @@
   justify-content: space-between;
   align-items: center;
 }
+.header .header-nav {
+  height: 100%;
+}
 .header .header-nav .nav-list {
+  height: 100%;
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
 }
 .header .header-nav .nav-list .nav-item {
   padding: 0 10px;
   font-size: 18px;
   color: #333;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.header .header-nav .nav-list .nav-item.active {
+  border-bottom: 4px solid #178FCC;
 }
 .layout {
   display: flex;

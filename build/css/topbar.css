@@ -1,6 +1,9 @@
 .topbar {
   background-color: #F8F8F8;
+  position: fixed;
+  z-index: 99;
   height: 25px;
+  width: 100%;
 }
 .topbar .container {
   display: flex;
