@@ -30,7 +30,7 @@
   background-color: #fff;
 }
 .main .content.solution {
-  padding-top: 0px;
+  padding-top: 160px;
   padding-bottom: 120px;
 }
 /* banner start */
@@ -64,6 +64,10 @@
   color: #fff;
   font-size: 24px;
 }
+.main .content.swiper .container {
+  justify-content: start;
+  top: 210px;
+}
 .main .content.swiper .arrowhead {
   width: 30px;
   position: absolute;
@@ -73,6 +77,10 @@
   margin: auto;
   z-index: 2;
   animation-iteration-count: infinite;
+}
+.main .content.introduce .container {
+  top: 140px;
+  justify-content: start;
 }
 .main .content.introduce h2 {
   color: #333;
@@ -180,7 +188,8 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: start;
-  padding-top: 40px;
+  padding-top: 160px;
+  padding-bottom: 200px;
 }
 .main .content.soil .promo {
   position: relative;
@@ -374,7 +383,7 @@
   width: 100%;
   bottom: 0;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.55);
 }
 .mask h3 {
   font-size: 22px;

@@ -1,3 +1,79 @@
+// 初始化滚动条
+$(function(){
+  window.onload = function(){setTimeout(function(){
+    $(window).scrollTop(0)},10);
+    methods.forbidScroll();
+  }
+})
+
+
+// 
+var methods = {
+  /** 禁用滚动*/
+  forbidScroll: function () {
+    document.querySelector("html").classList.add("lock");
+    window.addEventListener("mousewheel", this.forbidScroll);
+    window.addEventListener("touchmove", this.forbidScroll, { passive: false });
+  },
+  /** 启用滚动*/
+  enabledScroll: function () {
+    document.querySelector("html").classList.remove("lock");
+    window.removeEventListener("mousewheel", this.forbidScroll);
+    window.removeEventListener("touchmove", this.forbidScroll, { passive: false });
+  }
+}
+
+var First_Scroll_State = false;
+
+var scrollFunc = function(e){
+  e = e || window.event;
+  //IE/Opera/Chrome
+  if(e.wheelDelta){
+    console.log(1);
+    if(parseInt(e.wheelDelta)>0){ //上滑
+      if($('.equipment').offset().top - $(window).scrollTop() >= 0 && $('.equipment').offset().top - $(window).scrollTop() <= 133){
+        methods.forbidScroll();
+        $(".nav-list .nav-item a").eq(4).click()
+      }
+      if($('.introduce').offset().top - $(window).scrollTop() >= 0 && $('.introduce').offset().top - $(window).scrollTop() <= 133){
+        methods.forbidScroll();
+        $(".nav-list .nav-item a").eq(0).click()
+        First_Scroll_State = false;
+      }
+    }else{ // 下滑
+      console.log($('.swiper').offset().top - $(window).scrollTop() );
+      console.log($('.equipment').offset().top - $(window).scrollTop() );
+      if($('.swiper').offset().top - $(window).scrollTop() >= 0 && $('.swiper').offset().top - $(window).scrollTop() <= 130){
+        First_Scroll_State || $(".nav-list .nav-item a").eq(4).click()
+        First_Scroll_State = true;
+      }
+      if( $('.introduce').offset().top - $(window).scrollTop() >= 0 && $('.introduce').offset().top - $(window).scrollTop() <= 130){
+        $(".nav-list .nav-item a").eq(3).click()
+      }
+      if($('.equipment').offset().top - $(window).scrollTop() >= 0 && $('.equipment').offset().top - $(window).scrollTop() <= 133){
+        methods.enabledScroll();
+      }
+    }
+    if( $('.applet').offset().top - $(window).scrollTop() >= 0 && $('.applet').offset().top - $(window).scrollTop() <= 150){
+      $(".nav-list .nav-item ").eq(1).click()
+    }
+    if( $('.solution').offset().top - $(window).scrollTop() >= 0 && $('.solution').offset().top - $(window).scrollTop() <= 150){
+      $(".nav-list .nav-item ").eq(2).click()
+    }
+    if( $('.news').offset().top - $(window).scrollTop() >= 0 && $('.news').offset().top - $(window).scrollTop() <= 150){
+      $(".nav-list .nav-item ").eq(5).click()
+    }
+
+  }else if(e.detail){//Firefox
+    if(parseInt(e.detail)>0){
+        // ImageReduce();
+    }else{
+        // ImageExpand();
+    }
+  }
+}
+
+
 // tab 切换
 $(function(){
   $('.brick').mouseover(function(){
@@ -13,8 +89,12 @@ $(function(){
 
 // 
 $(function(){ 
-  $(".nav-list .nav-item a").click(function(){
-    console.log($(this))
+  $(".nav-list .nav-item").click(function(){
+    $(this).addClass('active').siblings().removeClass('active');
+    var index = $(this).index();
+    if(index==1||index==2||index==5){
+      methods.enabledScroll();
+    }
   })
   $(".arrowhead").click(function(){
     $(".nav-list .nav-item a").eq(4).click()
@@ -22,42 +102,25 @@ $(function(){
   var $position = $(window).scrollTop();
 
    // 封装防抖函数
-  function debounce (fn,delay){
+  function debounce (fn,delay,e){
     let time;
     let debounced = function(){
       let That = this
       clearTimeout(time)
       time = setTimeout(function (){
-        fn.call(That);
+        fn.apply(That,arguments);
       },delay)
     }
     return debounced
   }
   var time = 400;
   var off4 = true;
-  $(window).scroll(function() {
-
-    var $scroll = $(window).scrollTop();
-    var $swiper = $(".swiper");
-    var $introduce = $('.introduce');
-    var $equipment = $('.equipment');
-    if($scroll > $position) {
-      if( $scroll>=200 && $scroll<=1000 ){
-        setTimeout(function(){
-          $(window).scrollTop(1000)
-        },10)
-      }
-
-      // console.log('scrollDown');
-      // console.log("$swiper.offset().top",$swiper.offset().top)
-      // console.log("$introduce.offset().top",$introduce.offset().top)
-      // console.log($introduce.offset().top - $scroll)
-    } else {
-      console.log('scrollUp');
-      console.log($equipment.offset().top - $scroll)
-    }
-    $position = $scroll;
-  });
+  //Firefox
+  if(document.addEventListener){
+    document.addEventListener('DOMMouseScroll',scrollFunc,time,false);
+  }
+  //IE及其他浏览器
+  window.onmousewheel = document.onmousewheel=scrollFunc,time;
 });
 
 
@@ -75,3 +138,5 @@ getJSON('/db/category01.json').then(function(json){
     $(".news .news-list").html(domArr)
   }
 })
+
+

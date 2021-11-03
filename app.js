@@ -14,10 +14,22 @@ let createArticle = async (dir,categoryName,category) =>{
   for(let i = 0; i < dir.length; i++){
     let color =  'color:#'+ Math.random().toString(16).substr(-6);
     console.log(`%c docx/${dir[i]}`,'color:#0f0;');
+    const options = {
+      convertImage: mammoth.images.imgElement(function(image) {
+          return image.read("base64").then(function(imageBuffer) {
+            const name = new Date().getTime();
+            let dataBuffer = Buffer.from(imageBuffer, 'base64');
+            fs.writeFileSync(`./build/upload/${name}.jpeg`,dataBuffer)
+            return {
+              src: `/upload/${name}.jpeg`
+            };
+          });
+      })
+  };
     // 读取docx下所有的文件
     const {value} = await mammoth.convertToHtml({
       path:`./docx/${category}/${dir[i]}`
-    })
+    },options)
     // 正则表达式
     const reg = /<h1>(?<title>.*)<\/h1>(?<content>.*)/;
     const result = reg.exec(value);
